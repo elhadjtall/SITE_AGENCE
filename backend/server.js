@@ -1,16 +1,21 @@
 const express = require('express');
-const router = express.Router();
-const redisClient = require('./config/redis');
+const app = express();
+const port = 3000;
+const redis = require('./routes/redis');
 
-// Test d'écriture et de lecture dans Redis
-router.get('/test-redis', async (req, res) => {
-  try {
-    await redisClient.set('test_key', 'Hello Redis!');
-    const value = await redisClient.get('test_key');
-    res.json({ message: `Valeur dans Redis : ${value}` });
-  } catch (err) {
-    res.status(500).json({ error: 'Erreur Redis', details: err.message });
-  }
+
+// Middlewares pour parser les Json
+app.use(express.json());
+
+// Routes
+app.use('/redis', redis);
+
+// Lancer le serveur
+app.use((req, res) => {
+    res.status(200).json({ message: 'Bienvenue sur le backend' });
 });
 
-module.exports = router;
+// Lancer le serveur
+app.listen(port, () => {
+    console.log(`Le serveur est lancé sur le port ${port}`);
+});
