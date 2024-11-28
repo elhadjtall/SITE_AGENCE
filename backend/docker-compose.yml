@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest # Utilise l'image officielle de Redis
+    container_name: redis-server
+    ports:
+      - "6379:6379" # Redis exposé sur le port 6379
+    volumes:
+      - redis-data:/data # Volume pour persister les données Redis
+
+volumes:
+  redis-data: # Volume Redis pour sauvegarder les données
