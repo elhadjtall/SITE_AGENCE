@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const redisClient = require('./redisClient');
+const redisClient = require('./config/redis');
 
 // Test d'écriture et de lecture dans Redis
 router.get('/test-redis', async (req, res) => {
