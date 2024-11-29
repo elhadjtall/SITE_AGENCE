@@ -1,23 +1,27 @@
-const client = require('./config/redis');
+const client = require('../config/redis'); // Assurez-vous que le chemin est correct
 
 const Redis = {
-    createIndex: async () => {
-        const indexExists = await client.indices.exists({ index: 'users' });
-        if (!indexExists) {
-            return client.indices.create({ 
-                index: 'users',
-                body: {
-                    mappings: {
-                        properties: {
-                            username: { type: 'text' },
-                            password: { type: 'text' },
-                        },
-                    },
-                },
-            });
-        } 
-        return null      
-    },
+  // Exemple : Ajouter une clé
+  setKey: async (key, value) => {
+    try {
+      await client.set(key, value);
+      console.log(`Clé ajoutée : ${key} = ${value}`);
+    } catch (err) {
+      console.error('Erreur lors de l\'ajout de la clé :', err);
+      throw err;
     }
+  },
 
-    module.exports = redis
+  // Exemple : Récupérer une clé
+  getKey: async (key) => {
+    try {
+      const value = await client.get(key);
+      return value;
+    } catch (err) {
+      console.error('Erreur lors de la récupération de la clé :', err);
+      throw err;
+    }
+  }
+};
+
+module.exports = Redis; // Exporter l'objet Redis

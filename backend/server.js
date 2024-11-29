@@ -1,21 +1,8 @@
 const express = require('express');
+const redisRoutes = require('./routes/redis');
 const app = express();
-const port = 3000;
-const redis = require('./routes/redis');
 
+app.use('/api', redisRoutes);
 
-// Middlewares pour parser les Json
-app.use(express.json());
-
-// Routes
-app.use('/redis', redis);
-
-// Lancer le serveur
-app.use((req, res) => {
-    res.status(200).json({ message: 'Bienvenue sur le backend' });
-});
-
-// Lancer le serveur
-app.listen(port, () => {
-    console.log(`Le serveur est lancé sur le port ${port}`);
-});
+const PORT = 3000;
+app.listen(PORT, () => console.log(`Serveur démarré sur http://localhost:${PORT}`));

@@ -1,16 +1,19 @@
 const express = require('express');
-const Redis = require('./models/redis');
 const router = express.Router();
-const client = require('./config/redis');
+const Redis = require('../models/redis'); // Importez l'objet Redis
 
-// Route pour initialiser l'index Redis
-router.get('/create-index', async (req, res) => {
+// Route pour tester l'ajout et la récupération de clé
+router.get('/test-redis', async (req, res) => {
   try {
-    const result = await redis.createIndex();
-    res.status(200).json({ message: result ? 'Index créer avec success' : 'Index deja creer' });
-  } catch (error) {
-    console.error("Erreur de l'initialisation de l'index :", error);
-    res.status(500).json({ error: 'Une erreur s\'est produite lors de l\'initialisation de l\'index.' });
+    // Ajoute une clé dans Redis
+    await Redis.setKey('test_key', 'Hello Redis!');
+
+    // Récupère la clé depuis Redis
+    const value = await Redis.getKey('test_key');
+
+    res.json({ message: `Valeur récupérée : ${value}` });
+  } catch (err) {
+    res.status(500).json({ error: 'Erreur Redis', details: err.message });
   }
 });
 
