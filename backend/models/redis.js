@@ -23,6 +23,16 @@ const Redis = {
       throw err;
     }
   },
+  // Mise à jour d'une donnée par ID
+  updateById: async (id, data) => {
+    try {
+      await client.set(id, JSON.stringify(data)); // Stocke la donnée avec l'ID comme clé
+      console.log(`Donnée mise à jour avec успé : ${id}`);
+    } catch (err) {
+      console.error(`Erreur lors de la mise à jour de la donnée avec id ${id} :`, err);
+      throw err;
+    }
+  },
 
   // Récupération d'une donnée par ID
   getById: async (id) => {

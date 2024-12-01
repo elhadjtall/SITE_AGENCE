@@ -1,6 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const redisRoutes = require('./routes/redis'); // Import des routes Redis
 const app = express();
+
+
+// Active CORS pour autoriser les requêtes depuis le front-end
+app.use(cors());
 
 // Middleware pour parser les requêtes JSON
 app.use(express.json());
