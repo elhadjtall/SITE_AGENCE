@@ -1,31 +1,31 @@
 {
-    "name": "Node.js with Custom Redis",
+    "name": "Node.js with Redis",
     "dockerComposeFile": [
       "../docker-compose.yml"
     ],
     "service": "backend",
     "workspaceFolder": "/usr/src/app",
     "extensions": [
-      "dbaeumer.vscode-eslint", // Extension ESLint
-      "esbenp.prettier-vscode", // Extension Prettier
-      "ms-azuretools.vscode-docker" // Extension Docker
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "ms-azuretools.vscode-docker"
     ],
     "settings": {
-      "editor.formatOnSave": true, // Formate le code à l'enregistrement
-      "terminal.integrated.defaultProfile.linux": "bash" // Utilise Bash par défaut dans le terminal
+      "editor.formatOnSave": true,
+      "terminal.integrated.defaultProfile.linux": "bash"
     },
     "remoteEnv": {
-      "REDIS_HOST": "redis", // Variable d'environnement pour le service Redis
+      "REDIS_HOST": "redis",
       "REDIS_PORT": "6379"
     },
-    "postCreateCommand": "npm install", // Commande exécutée après la création du conteneur
+    "postCreateCommand": "npm install",
     "portsAttributes": {
       "3000": {
-        "label": "Backend Port", // Port du backend Node.js
+        "label": "Backend Port",
         "onAutoForward": "notify"
       },
       "6379": {
-        "label": "Redis Port", // Port Redis
+        "label": "Redis Port",
         "onAutoForward": "ignore"
       }
     },

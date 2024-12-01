@@ -5,6 +5,7 @@ const Redis = require('../models/redis');
 // Route pour ajouter une donnée
 router.post('/add', async (req, res) => {
   try {
+    console.log("Données envoyées par le client:", req.body);
     const data = req.body; // Données envoyées par le client
     await Redis.add(data);
     res.status(201).json({ message: 'Donnée ajoutée avec succès !', data });

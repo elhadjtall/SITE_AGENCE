@@ -1,11 +1,11 @@
 const express = require('express');
-const redisRoutes = require('./routes/redis');
+const redisRoutes = require('./routes/redis'); // Import des routes Redis
 const app = express();
 
-// Middleware pour parser les données JSON
+// Middleware pour parser les requêtes JSON
 app.use(express.json());
 
-// Ajout des routes Redis
+// Ajoute les routes Redis avec le préfixe "/redis"
 app.use('/redis', redisRoutes);
 
 const PORT = 3000;
