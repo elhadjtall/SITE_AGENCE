@@ -39,6 +39,18 @@ router.get('/view/:id', async (req, res) => {
   }
 });
 
+// Route pour mettre à jour une donnée par id
+router.put('/update/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    const data = req.body;
+    await Redis.updateById(id, data);
+    res.json({ message: `Donnée avec id ${id} mise à jour avec succès` });
+  } catch (err) {
+    res.status(500).json({ error: 'Erreur lors de la mise à jour des données', details: err.message });
+  }
+});
+
 // Route pour supprimer une donnée par id
 router.delete('/delete/:id', async (req, res) => {
   try {
