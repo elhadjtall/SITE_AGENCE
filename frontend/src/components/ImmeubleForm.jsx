@@ -24,6 +24,8 @@ const ImmeubleForm = ({ onSubmit }) => {
       <input name="nom" placeholder="Nom" value={formData.nom} onChange={handleChange} />
       <input name="adresse" placeholder="Adresse" value={formData.adresse} onChange={handleChange} />
       <input name="nbr_appartements" placeholder="Nombre d'appartements" type="number" value={formData.nbr_appartements} onChange={handleChange} />
+      <input name='image' placeholder="URL de l'image" value={formData.image} onChange={handleChange} />
+      <input name='description' placeholder="Description" value={formData.description} onChange={handleChange} />
       <button type="submit">Ajouter</button>
     </form>
   );

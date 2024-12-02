@@ -18,8 +18,8 @@ const ViewImmeubles = () => {
 
   return (
     <div>
-      <h1>Liste des Immeubles</h1>
-      <ImmeubleList immeubles={immeubles} onDelete={handleDelete} />
+      <h1 style={{ textAlign: "center" }}>Liste des Immeubles</h1>
+      <ImmeubleList immeubles={immeubles} />
     </div>
   );
 };
