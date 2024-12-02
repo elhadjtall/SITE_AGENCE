@@ -6,7 +6,7 @@ const client = redis.createClient({
   port: 6379,        // Port par défaut de Redis
 });
 
-client.on('error', (err) => console.error('Erreur Redis :', err));
+client.on('error', (err) => console.error('Erreur dans le client Redis :', err));
 
 client.connect()
   .then(() => console.log('Connecté à Redis'))
