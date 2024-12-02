@@ -15,7 +15,7 @@ router.post('/add', async (req, res) => {
 });
 
 // Route pour récupérer toutes les données
-router.get('/imeubles', async (req, res) => {
+router.get('/view', async (req, res) => {
   try {
     const data = await Redis.getAll();
     res.json(data);
@@ -25,7 +25,7 @@ router.get('/imeubles', async (req, res) => {
 });
 
 // Route pour récupérer une donnée par id
-router.get('/imeubles/:id', async (req, res) => {
+router.get('/view/:id', async (req, res) => {
   try {
     const id = req.params.id;
     const data = await Redis.getById(id);

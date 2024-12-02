@@ -6,7 +6,7 @@ const API_BASE_URL = 'http://localhost:3000/redis';
 
 // Récupération de tous les immeubles
 export const getAllImmeubles = async () => {
-  const response = await axios.get(`${API_BASE_URL}/imeubles`);
+  const response = await axios.get(`${API_BASE_URL}/view`);
   return response.data;
 };
 
