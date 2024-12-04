@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './App.css';
 import { Outlet } from "react-router-dom";
-import Navitems from "./components/NavItems";
+import NavItems from "./components/NavItems";
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Navitems />
+      <NavItems />
       {/* code bootstrap qui affiche le contenu maximale  */}
       <div className="min-vh-100">
         <Outlet/>
