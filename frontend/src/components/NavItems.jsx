@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import Header from './Header';
 
 
 const navItems = () => {
@@ -24,7 +23,26 @@ const navItems = () => {
             <div className="hedear-top">
                 <div className="container">
                     <div className="header-top-area">
-                        
+                        <Link to="/signup" className='lab-btn me-3'><span>Create Account</span></Link>
+                        <Link to="/login"><span>Log In</span></Link>
+                    </div>
+                </div>
+            </div>
+
+            {/*  Headet Botton */}
+            <div className="header-bottom">
+                <div className="container">
+                    <div className="header-wrapper">
+                        {/* Logo */}
+                        <div className="logo">
+                            <div className="logo-search-acte">
+                                <div className="logo">
+                                    <Link to="/">
+                                    <h1>ElhadjTALL</h1>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,3 +50,6 @@ const navItems = () => {
     )
 
 }
+
+
+export default Navitems
