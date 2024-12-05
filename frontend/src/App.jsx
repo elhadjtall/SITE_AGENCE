@@ -1,21 +1,12 @@
-import React, {useState} from "react";
-import './App.css';
-import { Outlet } from "react-router-dom";
-import NavItems from "./components/NavItems";
+import React from 'react'
+import NavItems from './components/NavItems'
 
-
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <>
+    <div className='bg-slate-900'> 
       <NavItems />
-      {/* code bootstrap qui affiche le contenu maximale  */}
-      <div className="min-vh-100">
-        <Outlet/>
-      </div>
-    </>
+    </div>
   )
 }
 
-export default App;
+export default App
