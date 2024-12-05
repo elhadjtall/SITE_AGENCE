@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaTimesCircle } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 const NavItems = () => {
+
+    const [click, setClick] = useState(false);
+    const handleClick = () => {
+        setClick(!click);
+    }
+
     // On creer une constante pour le menu
     const content = <>
         <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-slate-900 transition">
@@ -55,6 +63,16 @@ const NavItems = () => {
                         </ul>
                     </div>
                 </div>
+                {/* ajout */}
+                <div>
+                    {click && content}
+                </div>
+
+                {/* ajout d'un bouton */}
+
+                <button className="block sm:hidden transition" onClick={handleClick}>
+                    {click ? <FaTimesCircle/> : <GiHamburgerMenu/>}
+                </button>
             </div>
         </nav>
     )
