@@ -5,22 +5,22 @@ import { Link } from "react-router-dom";
 const NavItems = () => {
     // On creer une constante pour le menu
     const content = <>
-        <div>
-            <ul>
+        <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-slate-900 transition">
+            <ul className="text-center text-xl p-20">
                 <Link to="Home">
-                    <li>Home</li>
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">Home</li>
                 </Link>
                 
                 <Link to="About">
-                    <li>About</li>
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">About</li>
                 </Link>
                 
                 <Link to="Services">
-                    <li>Services</li>
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">Services</li>
                 </Link>
                 
                 <Link to="Contact">
-                    <li>Contact</li>
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">Contact</li>
                 </Link>
             </ul>
         </div>
