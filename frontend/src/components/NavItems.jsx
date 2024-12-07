@@ -45,7 +45,7 @@ const NavItems = () => {
                         {/* ce code permet d'aligner de façons horizontal votre navbar */}
                         <ul className="flex gap-8 mr-16 text-[18px]">
                             {/* Le css dans le li est une mise en forme pour le hover et le cursor pointer */}
-                        <Link spy={true} smooth={true} to="Home">
+                        <Link spy={true} smooth={true} to="/">
                             <li className="hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer">Home</li>
                         </Link>
                         
