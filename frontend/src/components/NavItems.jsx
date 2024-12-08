@@ -62,6 +62,10 @@ const NavItems = () => {
                         </Link>
                         </ul>
                     </div>
+                    <div className="lg:flex md:flex lg: flex-1 items center justify-between font-normal ">
+                        <Link to='/login'>Log in</Link>
+                        <Link to='/signup'>Sign up</Link>
+                    </div>
                 </div>
                 {/* ajout */}
                 <div>
