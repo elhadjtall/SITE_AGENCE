@@ -64,7 +64,7 @@ const NavItems = () => {
                     </div>
                     <div className="lg:flex md:flex lg: flex-1 items center justify-between font-normal ">
                         <Link className="hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer" to='/login'>Log in</Link>
-                        <Link className="hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer" to='/signup'>Sign up</Link>
+                        <Link className="hover:text-fuchsia-600 transition border-b-2 hover:bg-orange-800 px-4 py-3 rounded-lg transition" to='/signup'>Sign up</Link>
                     </div>
                 </div>
                 {/* ajout */}
