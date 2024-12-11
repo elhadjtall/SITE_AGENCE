@@ -17,9 +17,6 @@ import { RiSearch2Line } from 'react-icons/ri';
 // importation des HouseContext
 import { HouseContext } from './HouseContext';
 const Search = () => {
-  // implementation de la barre de recherche avec les composants house, country et price
-  const {houses} = useContext(HouseContext);
-  console.log(houses);
   return (
     <div className='px-[30px] py-6 max-w-[1170px] mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 relative lg:-top-4 lg:shadow-1 bg-red-50 lg:bg-transparent lg:backdrop-blur rounded-lg'>
       <CountryDropdown />
