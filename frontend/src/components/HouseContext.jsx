@@ -1,20 +1,15 @@
-import React, { useState, useEffect, createContext } from 'react';
-
-
-// import les datas
+import React, { useState, createContext } from 'react';
 import { housesData } from '../data';
 
-
-// creation du context
+// Création du contexte
 export const HouseContext = createContext();
 
+// Composant Provider
+export const HouseContextProvider = ({ children }) => {
 
-const HouseContextProvider = () => {
   return (
-    <HouseContext.Provider value={console.log('je suis le context')}>
+    <HouseContext.Provider value={console.log('test') }>
       {children}
     </HouseContext.Provider>
-  )
-}
-
-export default HouseContext
+  );
+};

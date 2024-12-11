@@ -5,6 +5,9 @@ import App from "./App.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+// Import HouseContextProvider
+import { HouseContextProvider } from "./components/HouseContext.jsx";
+
 import Home from "./pages/Home.jsx";
 
 const router = createBrowserRouter([
@@ -21,7 +24,9 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
+  <HouseContextProvider>
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>
+  </HouseContextProvider>
 );
