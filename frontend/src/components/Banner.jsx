@@ -3,7 +3,7 @@ import React from 'react';
 
 
 // importation image du banner
-import banner from '../assets/img/banner.jpg';
+import banner from '../assets/img/house-banner.png';
 
 // importation des composants search
 import Search from '../components/Search';
