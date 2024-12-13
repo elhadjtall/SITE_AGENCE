@@ -1,11 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+module.exports = {
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}'], // Chemins des fichiers à scanner
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary: ['Inter', ...defaultTheme.fontFamily.sans], // Remplacez "Inter" par la police souhaitée
+      },
+    },
   },
   plugins: [],
-}
+};

@@ -13,11 +13,18 @@ const CountryDropdown = () => {
   return (
     <Menu as="div" className="dropdown relative">
       {/* Code pour le bouton de dropdown et ses icones */}
-      <Menu.Button>
-        <RiMapPinLine className="dropdown-icon primary" />
+      <Menu.Button className="dropdown-btn w-full text-left" onClick={() => setIsOpen(!isOpen)}>
+        <RiMapPinLine className="dropdown-icon-primary" />
         <div>
           <div>{country}</div>
           <div>Selectionner votre pays</div>
+          {
+            isOpen ? (
+              <RiArrowUpSLine className="dropdown-icon-primary" />
+            ) : (
+              <RiArrowDownSLine className="dropdown-icon-primary" />
+            )
+          }
         </div>
     </Menu.Button>
     </Menu>
