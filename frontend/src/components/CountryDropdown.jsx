@@ -16,8 +16,8 @@ const CountryDropdown = () => {
       <Menu.Button className="dropdown-btn w-full text-left" onClick={() => setIsOpen(!isOpen)}>
         <RiMapPinLine className="dropdown-icon-primary" />
         <div>
-          <div>{country}</div>
-          <div>Selectionner votre pays</div>
+          <div className='text-[15px] font-medium leading-tight'>{country}</div>
+          <div className='text-[13px]'>Selectionner votre pays</div>
           {
             isOpen ? (
               <RiArrowUpSLine className="dropdown-icon-primary" />
