@@ -13,7 +13,13 @@ const CountryDropdown = () => {
   return (
     <Menu as="div" className="dropdown relative">
       {/* Code pour le bouton de dropdown et ses icones */}
-        <RiMapPinLine />
+      <Menu.Button>
+        <RiMapPinLine className="dropdown-icon primary" />
+        <div>
+          <div>{country}</div>
+          <div>Selectionner votre pays</div>
+        </div>
+    </Menu.Button>
     </Menu>
   );
 };
