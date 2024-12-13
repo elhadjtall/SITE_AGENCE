@@ -6,12 +6,15 @@ import { HouseContext } from './HouseContext'; // Import du contexte
 const CountryDropdown = () => {
   const { country, setCountry, countries } = useContext(HouseContext); // Utilisation du contexte
 
-  console.log(country); // Affiche le pays actuel dans la console
+  const [isOpen, setIsOpen] = useState(false);
+
+  // console.log(country); // Affiche le pays actuel dans la console
 
   return (
-    <div>
-      CountryDropdown
-    </div>
+    <Menu as="div" className="dropdown relative">
+      {/* Code pour le bouton de dropdown et ses icones */}
+        <RiMapPinLine />
+    </Menu>
   );
 };
 
