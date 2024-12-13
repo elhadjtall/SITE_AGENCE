@@ -8,7 +8,7 @@ const CountryDropdown = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  // console.log(country); // Affiche le pays actuel dans la console
+   console.log(countries); // Affiche le pays actuel dans la console
 
   return (
     // Code pour le menu de pays

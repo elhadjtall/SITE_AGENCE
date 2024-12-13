@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import { housesData } from '../data';
 
 // Création du contexte
@@ -14,6 +14,17 @@ export const HouseContextProvider = ({ children }) => {
   const [properties, setProperties] = useState([]);
   const [price, setPrice] = useState('price range (any)');
   const [loading, setLoading] = useState(false);
+
+  // Retourne tous les pays de la base de données
+  useEffect(() => {
+    const allCountries = houses.map((house) => house.country);
+
+    // Supprimez les doublons et ajoutez une option par défaut
+    const uniqueCountries = ['location (any)', ...new Set(allCountries)];
+
+    // Mettez les pays dans l'ordre alphabétique
+    setCountries(uniqueCountries.sort());
+  }, [houses]);
 
   // Retourne le provider avec les valeurs du contexte
   return (
