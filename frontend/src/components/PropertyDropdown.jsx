@@ -8,8 +8,6 @@ const PropertyDropdown = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-   console.log(properties); // Affiche le pays actuel dans la console
-
   return (
     // Code pour le menu de pays
     <Menu as="div" className="dropdown relative">

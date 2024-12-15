@@ -7,8 +7,6 @@ const PriceRangeDropdown = () => {
   const { price, setPrice} = useContext(HouseContext); // Utilisation du contexte
 
   const [isOpen, setIsOpen] = useState(false);
-
-  //  console.log(properties); // Affiche le pays actuel dans la console
   // definition du prix
   const prices = [
     {
