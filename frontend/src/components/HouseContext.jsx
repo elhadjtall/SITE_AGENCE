@@ -24,7 +24,19 @@ export const HouseContextProvider = ({ children }) => {
 
     // Mettez les pays dans l'ordre alphabétique
     setCountries(uniqueCountries.sort());
-  }, [houses]);
+  
+  }, []);
+
+// Retourne tous les types de biens immobiliers de la base de données
+  useEffect(() => {
+    const allProperties = houses.map((house) => house.type);
+
+    // Supprimez les doublons et ajoutez une option par défaut 
+    const uniqueProperties = ['property type (any)', ...new Set(allProperties)];
+
+    // Mettez les types de biens immobiliers dans l'ordre alphabétique
+    setProperties(uniqueProperties.sort());
+  }, []);
 
   // Retourne le provider avec les valeurs du contexte
   return (
