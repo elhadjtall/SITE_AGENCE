@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'; // Suppression des imports inutilisés (useState, useEffect)
-import { RiMapPinLine, RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri'; // Import des icônes
+import { RiArrowDownSLine, RiArrowUpSLine, RiHome5Line } from 'react-icons/ri'; // Import des icônes
 import { Menu } from '@headlessui/react'; // Import de Headless UI
 import { HouseContext } from './HouseContext'; // Import du contexte
 
@@ -15,7 +15,8 @@ const PropertyDropdown = () => {
     <Menu as="div" className="dropdown relative">
       {/* Code pour le bouton de pays et la phrase "Selectionner votre pays"  */}
       <Menu.Button className="dropdown-btn w-full text-left" onClick={() => setIsOpen(!isOpen)}>
-        <RiMapPinLine className="dropdown-icon-primary" />
+        {/* Code pour les icones */}
+        <RiHome5Line className="dropdown-icon-primary" />
         <div>
           <div className='text-[15px] font-medium leading-tight'>{property}</div>
           <div className='text-[13px]'>Selectionner votre property</div>
@@ -36,7 +37,7 @@ const PropertyDropdown = () => {
           <Menu.Item
             as="li"
             key={index}
-            onClick={() => setCountry(property)}
+            onClick={() => setProperty(property)}
             className="cursor-pointer hover:text-violet-700 transition"
           >
             {property}
