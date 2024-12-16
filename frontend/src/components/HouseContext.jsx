@@ -38,6 +38,11 @@ export const HouseContextProvider = ({ children }) => {
     setProperties(uniqueProperties.sort());
   }, []);
 
+  // importation de la fonction handleClick
+  const handleClick = () => {
+    console.log('clicked');
+  }
+
   // Retourne le provider avec les valeurs du contexte
   return (
     <HouseContext.Provider
@@ -56,6 +61,7 @@ export const HouseContextProvider = ({ children }) => {
         setPrice,
         loading,
         setLoading,
+        handleClick,
       }}
     >
       {children}
