@@ -11,7 +11,7 @@ const House = ({ house}) => {
     const {image, type, country, address, bedrooms, bathrooms, surface, price} = house;
   return (
     // creer une div pour ajouter les images et les infos
-    <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-lg'>
+    <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-[5rem]'>
       <img src={image} alt="" />
       {/* creer une div pour ajouter les infos */}
       <div className='flex flex-col gap-3'>
@@ -19,17 +19,6 @@ const House = ({ house}) => {
         <div>
           <h4>{type}</h4>
           <p>{country}</p>
-        </div>
-        {/* creer une div pour ajouter l'adresse */}
-        <div>
-          <h4>{address}</h4>
-          <p>{price}</p>
-        </div>
-        {/* creer une div pour ajouter les infos */}
-        <div>
-          <p>{bedrooms} <BiBed className='text-violet-700' /></p>
-          <p>{bathrooms} <BiBath className='text-violet-700' /></p>
-          <p>{surface} <BiArea className='text-violet-700' /></p>
         </div>
       </div>
     </div>
