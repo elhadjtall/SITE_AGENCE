@@ -12,14 +12,12 @@ const House = ({ house}) => {
   return (
     // creer une div pour ajouter les images et les infos
     <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition'>
-      <img src={image} alt="" />
+      <img className='mb-8 w-full rounded-lg' src={image} alt="" />
       {/* creer une div pour ajouter les infos */}
-      <div className='flex flex-col gap-3'>
+      <div className='mb-4 flex gap-x-2 text-sm'>
         {/* creer une div pour ajouter le type */}
-        <div>
-          <div>{type}</div>
-          <div>{country}</div>
-        </div>
+          <div className='bg-green-500 rounded-full text-white px-3'>{type}</div>
+          <div className='bg-violet-500 rounded-full text-white px-3'>{country}</div>
       </div>
     </div>
   )
