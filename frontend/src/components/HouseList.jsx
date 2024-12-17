@@ -17,9 +17,19 @@ const HouseList = () => {
     const { houses, loading } = useContext(HouseContext)
     console.log(houses)
   return (
-    <div>
-      HouseList
-    </div>
+    <section className='mb-20'>
+      <div className="container mx-auto">
+        <div>
+            {houses.map((house, index) => {
+                return <Link to={`/proerty/${house.id}`}
+                key={index}>
+                    <House house={house} />
+                
+                </Link>;
+            })}
+        </div>
+      </div>
+    </section>
   )
 }
 
