@@ -10,8 +10,12 @@ const House = ({ house}) => {
     // creer une constante house, image, type, country, address, bedrooms, bathrooms, surface, price
     const {image, type, country, address, bedrooms, bathrooms, surface, price} = house;
   return (
+    // creer une div pour ajouter les images et les infos
     <div>
       <img src={image} alt="" />
+      <div>
+
+      </div>
     </div>
   )
 }
