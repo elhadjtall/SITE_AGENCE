@@ -19,7 +19,8 @@ const HouseList = () => {
   return (
     <section className='mb-20'>
       <div className="container mx-auto">
-        <div>
+        {/* Dans ce div on fait la mise en forme de nos images et les infos en 3 formes */}
+        <div className='grid grid-cols-2 md:grid-cols-3'>
             {houses.map((house, index) => {
                 return <Link to={`/proerty/${house.id}`}
                 key={index}>
