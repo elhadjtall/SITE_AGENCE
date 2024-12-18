@@ -20,6 +20,7 @@ const House = ({ house}) => {
           <div className='bg-violet-500 rounded-full text-white px-3'>{country}</div>
       </div>
       <div className='text-lg font-semibold max-w-[260px]'>{address}</div>
+      <div className='flex gap-x-4'> {/* creer une div pour ajouter les infos */}
       <div className='flex items-center text-gray-600 gap-1'>
         <div className='text-[20px]'><BiBed/></div>
         <div>{bedrooms}</div>
@@ -29,8 +30,9 @@ const House = ({ house}) => {
         <div>{bathrooms}</div>
       </div>
       <div className='flex items-center text-gray-600 gap-1'>
-        <div className='text-[20px]'><BiBed/></div>
-        <div>{bedrooms}</div>
+        <div className='text-[20px]'><BiArea/></div>
+        <div>{surface}</div>
+      </div>
       </div>
       <div className='text-lg font-semibold text-violet-600 mb-4'>{price}</div>
     </div>
