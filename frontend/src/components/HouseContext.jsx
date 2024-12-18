@@ -40,7 +40,7 @@ export const HouseContextProvider = ({ children }) => {
 
   // importation de la fonction handleClick
   const handleClick = () => {
-    console.log('clicked');
+    console.log(country, property, price);
   }
 
   // Retourne le provider avec les valeurs du contexte
