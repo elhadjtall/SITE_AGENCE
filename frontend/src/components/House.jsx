@@ -24,6 +24,14 @@ const House = ({ house}) => {
         <div className='text-[20px]'><BiBed/></div>
         <div>{bedrooms}</div>
       </div>
+      <div className='flex items-center text-gray-600 gap-1'>
+        <div className='text-[20px]'><BiBath/></div>
+        <div>{bathrooms}</div>
+      </div>
+      <div className='flex items-center text-gray-600 gap-1'>
+        <div className='text-[20px]'><BiBed/></div>
+        <div>{bedrooms}</div>
+      </div>
       <div className='text-lg font-semibold text-violet-600 mb-4'>{price}</div>
     </div>
   )
