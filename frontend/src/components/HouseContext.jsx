@@ -52,14 +52,25 @@ export const HouseContextProvider = ({ children }) => {
   const minPrice = parseInt(price.split(' ')[0]);
   // obtenir la deuxième valeur du prix et l’analyser pour le nombre
   const maxPrice = parseInt(price.split(' ')[2]);
-  console.log(minPrice, maxPrice);
+  // console.log(minPrice, maxPrice);
 
   // filtrer les biens immobiliers selon le prix
   const newHouses = housesData.filter((house) => {
-    console.log(house.price);
+    const housePrice = parseInt(house.price);
+
+    // si les values sont selectionnées
+    if (
+      house.country === country &&
+      house.type === property &&
+      housePrice >= minPrice &&
+      housePrice <= maxPrice
+    ) {
+      return house;
+    }
+    
   });
 
-  return newHouses;
+  console.log(newHouses);
 
   // Retourne le provider avec les valeurs du contexte
   return (
