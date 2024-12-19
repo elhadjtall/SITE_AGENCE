@@ -76,10 +76,16 @@ export const HouseContextProvider = ({ children }) => {
     ) {
       return house;
     }
-    // si le pays est par defaut
+    // si le pays n'est pas par defaut
     if (!isDefault(country) && isDefault(property) && isDefault(price)) {
       return house.country === country;
     }
+
+    // si le property is not default
+    if (!isDefault(property) && isDefault(country) && isDefault(price)) {
+      return house.type === property;
+    }
+    
   });
 
   console.log(newHouses);
