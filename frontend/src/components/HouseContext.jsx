@@ -43,6 +43,24 @@ export const HouseContextProvider = ({ children }) => {
     console.log(country, property, price);
   }
 
+  // create a function pour checker si le caractère est include
+  const isDefault = (str) => {
+    return str.split('').includes('any');
+  };
+
+  // obtenir la première valeur du prix et l’analyser pour le nombre
+  const minPrice = parseInt(price.split(' ')[0]);
+  // obtenir la deuxième valeur du prix et l’analyser pour le nombre
+  const maxPrice = parseInt(price.split(' ')[2]);
+  console.log(minPrice, maxPrice);
+
+  // filtrer les biens immobiliers selon le prix
+  const newHouses = housesData.filter((house) => {
+    console.log(house.price);
+  });
+
+  return newHouses;
+
   // Retourne le provider avec les valeurs du contexte
   return (
     <HouseContext.Provider
