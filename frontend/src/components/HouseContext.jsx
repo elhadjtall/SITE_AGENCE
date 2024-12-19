@@ -68,6 +68,16 @@ export const HouseContextProvider = ({ children }) => {
       return house;
     }
     
+    // si les values sont par defaut
+    if (
+      isDefault(country) ||
+      isDefault(property) ||
+      isDefault(price) ||
+      housePrice < minPrice ||
+      housePrice > maxPrice
+    ) {
+      return house;
+    }
   });
 
   console.log(newHouses);
