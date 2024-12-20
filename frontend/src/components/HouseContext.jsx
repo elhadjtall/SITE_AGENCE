@@ -97,6 +97,13 @@ export const HouseContextProvider = ({ children }) => {
     if (!isDefault(country) && !isDefault(property) && isDefault(price)) {
       return house.country === country && house.type === property;
     }
+
+    // si le pays et le prix n'est pas par defaut
+    if (!isDefault(country) && isDefault(property) && !isDefault(price)) {
+      if (house.country >= country && housePrice === minPrice && housePrice <= maxPrice) {
+        return house.country;
+      };
+    }
   });
 
   console.log(newHouses);
