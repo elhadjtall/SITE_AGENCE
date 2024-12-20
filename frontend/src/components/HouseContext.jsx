@@ -40,7 +40,8 @@ export const HouseContextProvider = ({ children }) => {
 
   // importation de la fonction handleClick
   const handleClick = () => {
-    console.log(country, property, price);
+
+    // console.log(country, property, price);
   }
 
   // create a function pour checker si le caractère est include
@@ -87,7 +88,7 @@ export const HouseContextProvider = ({ children }) => {
     }
     
     // si le prix n'est pas par defaut
-    if (isDefault(country) && isDefault(property) && !isDefault(price)) {
+    if (!isDefault(price) && isDefault(country) && !isDefault(property)) {
       if (housePrice >= minPrice && housePrice <= maxPrice) {
         return house;
       }
@@ -106,7 +107,7 @@ export const HouseContextProvider = ({ children }) => {
     }
 
     // si le property et le prix n'est pas par defaut
-    if (isDefault(country) && !isDefault(property) && !isDefault(price)) {
+    if (!isDefault(country) && !isDefault(property) && !isDefault(price)) {
       if (housePrice >= minPrice && housePrice <= maxPrice) {
         return house.country === property;
       }
