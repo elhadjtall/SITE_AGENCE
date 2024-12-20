@@ -1,12 +1,9 @@
 import React, { useState, createContext, useEffect } from 'react';
 import { housesData } from '../data';
 
-// Création du contexte
 export const HouseContext = createContext();
 
-// Composant Provider
 export const HouseContextProvider = ({ children }) => {
-  // Déclaration des états
   const [houses, setHouses] = useState(housesData);
   const [country, setCountry] = useState('location (any)');
   const [countries, setCountries] = useState([]);
@@ -15,100 +12,52 @@ export const HouseContextProvider = ({ children }) => {
   const [price, setPrice] = useState('price range (any)');
   const [loading, setLoading] = useState(false);
 
-  // Retourne tous les pays de la base de données
   useEffect(() => {
     const allCountries = houses.map((house) => house.country);
-
-    // Supprimez les doublons et ajoutez une option par défaut
     const uniqueCountries = ['location (any)', ...new Set(allCountries)];
-
-    // Mettez les pays dans l'ordre alphabétique
     setCountries(uniqueCountries.sort());
-  
-  }, []);
+  }, [houses]);
 
-// Retourne tous les types de biens immobiliers de la base de données
   useEffect(() => {
     const allProperties = houses.map((house) => house.type);
-
-    // Supprimez les doublons et ajoutez une option par défaut 
     const uniqueProperties = ['property type (any)', ...new Set(allProperties)];
-
-    // Mettez les types de biens immobiliers dans l'ordre alphabétique
     setProperties(uniqueProperties.sort());
-  }, []);
+  }, [houses]);
 
-  // importation de la fonction handleClick
-  const handleClick = () => {
-    console.log(country, property, price);
-  }
-
-  // create a function pour checker si le caractère est include
   const isDefault = (str) => {
-    return str.split('').includes('any');
+    return str.includes('any');
   };
 
-  // obtenir la première valeur du prix et l’analyser pour le nombre
-  const minPrice = parseInt(price.split(' ')[0]);
-  // obtenir la deuxième valeur du prix et l’analyser pour le nombre
-  const maxPrice = parseInt(price.split(' ')[2]);
-  // console.log(minPrice, maxPrice);
-
-  // filtrer les biens immobiliers selon le prix
-  const newHouses = housesData.filter((house) => {
-    const housePrice = parseInt(house.price);
-
-    // si les values sont selectionnées
-    if (
-      house.country === country &&
-      house.type === property &&
-      housePrice >= minPrice &&
-      housePrice <= maxPrice
-    ) {
-      return house;
-    }
+  const filterHouses = () => {
+    setLoading(true);
     
-    // si les values sont par defaut
-    if (
-      isDefault(country) &&
-      isDefault(property) &&
-      isDefault(price)
-    ) {
-      return house;
-    }
-    // si le pays n'est pas par defaut
-    if (!isDefault(country) && isDefault(property) && isDefault(price)) {
-      return house.country === country;
-    }
+    const minPrice = parseInt(price.split(' ')[0]) || 0;
+    const maxPrice = parseInt(price.split(' ')[2]) || Infinity;
 
-    // si le property is not default
-    if (!isDefault(property) && isDefault(country) && isDefault(price)) {
-      return house.type === property;
-    }
-    
-    // si le prix n'est pas par defaut
-    if (isDefault(country) && isDefault(property) && !isDefault(price)) {
-      if (housePrice >= minPrice && housePrice <= maxPrice) {
-        return house;
+    const filteredHouses = housesData.filter((house) => {
+      const housePrice = parseInt(house.price);
+
+      // Si tous les filtres sont par défaut
+      if (isDefault(country) && isDefault(property) && isDefault(price)) {
+        return true;
       }
-    }
 
-    // si le pays et le property n'est pas par defaut
-    if (!isDefault(country) && !isDefault(property) && isDefault(price)) {
-      return house.country === country && house.type === property;
-    }
+      // Application des filtres
+      const matchesCountry = isDefault(country) || house.country === country;
+      const matchesProperty = isDefault(property) || house.type === property;
+      const matchesPrice = isDefault(price) || (housePrice >= minPrice && housePrice <= maxPrice);
 
-    // si le pays et le prix n'est pas par defaut
-    if (!isDefault(country) && isDefault(property) && !isDefault(price)) {
-      if (house.country >= country && housePrice === minPrice && housePrice <= maxPrice) {
-        return house.country;
-      };
-    }
-  });
+      return matchesCountry && matchesProperty && matchesPrice;
+    });
 
-  console.log(newHouses);
+    setHouses(filteredHouses);
+    setTimeout(() => setLoading(false), 500);
+  };
 
-  // Retourne le provider avec les valeurs du contexte
+  const handleClick = () => {
+    filterHouses();
+  };
+
   return (
     <HouseContext.Provider
       value={{
@@ -117,15 +66,12 @@ export const HouseContextProvider = ({ children }) => {
         country,
         setCountry,
         countries,
-        setCountries,
         property,
         setProperty,
         properties,
-        setProperties,
         price,
         setPrice,
         loading,
-        setLoading,
         handleClick,
       }}
     >
