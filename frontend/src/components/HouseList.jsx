@@ -15,7 +15,20 @@ import { ImSpinner2 } from 'react-icons/im';
 
 const HouseList = () => {
     const { houses, loading } = useContext(HouseContext)
-    console.log(houses)
+    console.log(houses);
+
+    // si loading est vrai alors on affiche un spinner
+    if (loading) {
+        return (
+            <ImSpinner2 className='mx-auto animate-spin text-violet-700 text-4xl mt-[200px]'/>
+        );
+    }
+
+    if (houses.length < 1) {
+        return (
+          <ImSpinner2 className='mx-auto animate-spin text-violet-700 text-4xl mt-[200px]'/>  
+        );
+    }
   return (
     <section className='mb-20'>
       <div className="container mx-auto">

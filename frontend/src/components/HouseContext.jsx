@@ -109,7 +109,7 @@ export const HouseContextProvider = ({ children }) => {
     }
 
     // si le property et le prix n'est pas par defaut
-    if (!isDefault(country) && !isDefault(property) && !isDefault(price)) {
+    if (isDefault(country) && !isDefault(property) && !isDefault(price)) {
       if (housePrice >= minPrice && housePrice <= maxPrice) {
         return house.country === property;
       }
