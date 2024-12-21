@@ -41,6 +41,8 @@ export const HouseContextProvider = ({ children }) => {
   // importation de la fonction handleClick
   const handleClick = () => {
 
+    // set loading to true
+    setLoading(true);
     // console.log(country, property, price);
   }
 
@@ -112,6 +114,8 @@ export const HouseContextProvider = ({ children }) => {
         return house.country === property;
       }
     }
+
+
   });
   console.log(newHouses);
 
