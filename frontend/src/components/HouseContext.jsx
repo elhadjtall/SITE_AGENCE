@@ -117,27 +117,26 @@ export const HouseContextProvider = ({ children }) => {
 
 
   });
-  console.log(newHouses);
+  setTimeout(() => {
+    return newHouses.length < 1 ? setHouses(houses) : setHouses(newHouses);
+  }, 1000);
 
   // Retourne le provider avec les valeurs du contexte
   return (
     <HouseContext.Provider
       value={{
         houses,
-        setHouses,
         country,
         setCountry,
         countries,
-        setCountries,
         property,
         setProperty,
         properties,
-        setProperties,
         price,
         setPrice,
         loading,
-        setLoading,
         handleClick,
+        loading,
       }}
     >
       {children}
