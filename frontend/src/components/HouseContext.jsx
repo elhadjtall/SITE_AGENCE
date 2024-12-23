@@ -118,7 +118,8 @@ export const HouseContextProvider = ({ children }) => {
 
   });
   setTimeout(() => {
-    return newHouses.length < 1 ? setHouses(houses) : setHouses(newHouses);
+    return (newHouses.length < 1 ? setHouses(houses) : setHouses(newHouses),
+    setLoading(false));
   }, 1000);
 
   // Retourne le provider avec les valeurs du contexte
