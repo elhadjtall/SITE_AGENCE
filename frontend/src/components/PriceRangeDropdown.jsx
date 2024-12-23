@@ -25,7 +25,7 @@ const PriceRangeDropdown = () => {
       value: '600000 - 800000',
     },
     {
-      value: '800000 - 1000000',
+      value: '100000 - 130000',
     },
   ];
 

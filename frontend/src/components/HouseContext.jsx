@@ -114,9 +114,9 @@ export const HouseContextProvider = ({ children }) => {
         return house.country === property;
       }
     }
-
-
   });
+
+  // le temps de chargement de la page lorsqu'on choisi les filtres
   setTimeout(() => {
     return (newHouses.length < 1 ? setHouses(houses) : setHouses(newHouses),
     setLoading(false));
