@@ -1,28 +1,45 @@
 import React from 'react';
 
-
-// importation des datas
+// Importation des données
 import { housesData } from '../data';
 
+// Importation des hooks de React Router
+import { useParams, Link } from 'react-router-dom';
 
-// import use params
-import { useParams } from 'react-router-dom';
-
-// import icons
+// Importation des icônes
 import { BiBed, BiBath, BiArea } from 'react-icons/bi';
 
-// import links de navigation de react router
-import { Link } from 'react-router-dom';
-
 const PropertyDetail = () => {
-    // recupere l'id de l'url
-    const { id } = useParams();
-    console.log(id);
+  // Récupération de l'ID depuis les paramètres d'URL
+  const { id } = useParams();
+
+  // Recherche des détails de la propriété par son ID
+  const property = housesData.find((house) => house.id === parseInt(id, 10));
+
+  // Vérification si la propriété existe
+  if (!property) {
+    return (
+      <div>
+        <h2>Propriété introuvable</h2>
+        <Link to="/">Retour à la page d'accueil</Link>
+      </div>
+    );
+  }
+
+  const { name, beds, baths, area } = property; // Exemple d'utilisation des données
+
   return (
     <div>
-      PropertyDetails
+      <h1>Détails de la propriété</h1>
+      <h2>{name}</h2>
+      <div>
+        <BiBed /> {beds} Chambres
+        <BiBath /> {baths} Salles de bain
+        <BiArea /> {area} m²
+      </div>
+      <Link to="/">Retour à la page d'accueil</Link>
     </div>
-  )
-}
+  );
+};
 
 export default PropertyDetail;
