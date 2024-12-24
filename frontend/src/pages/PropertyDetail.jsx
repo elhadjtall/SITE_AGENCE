@@ -15,6 +15,12 @@ import { BiBed, BiBath, BiArea } from 'react-icons/bi';
 const PropertyDetail = () => {
   // Récupération de l'ID depuis les paramètres d'URL
   const { id } = useParams();
+  console.log(id);
+
+  //get the house based on the id
+  const house = housesData.find((house) => {
+    return house.id === parseInt(id);
+  });
 
   return (
     <div>
