@@ -31,6 +31,10 @@ const PropertyDetail = () => {
                 </div>
                 <div>
                     <div>{house.type}</div>
+                    <div>{house.country}</div>
+                </div>
+                <div>
+                    <div>$ {house.price}</div>
                 </div>
             </div>
         </div>
