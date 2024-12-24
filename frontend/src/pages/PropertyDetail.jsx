@@ -3,8 +3,8 @@ import React from 'react';
 // Importation des données
 import { housesData } from '../data';
 
-// Importation des hooks de React Router
-import { useParams, Link } from 'react-router-dom';
+// Importation des liens
+import { Link } from 'react-router-dom';
 
 // Importation des icônes
 import { BiBed, BiBath, BiArea } from 'react-icons/bi';
