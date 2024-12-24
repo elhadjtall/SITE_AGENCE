@@ -5,7 +5,7 @@ import React from "react";
 // Importation des composants
 import Banner from "../components/Banner";
 import HouseList from "../components/HouseList";
-import Footer from "../components/Footer";
+
 
 
 const Home = () => {

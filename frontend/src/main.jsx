@@ -8,7 +8,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Import HouseContextProvider
 import { HouseContextProvider } from "./components/HouseContext.jsx";
 
+// Import des pages
 import Home from "./pages/Home.jsx";
+import PropertyDetail from "./pages/PropertyDetail.jsx"; // Importez la page PropertyDetail
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/property/:id", // Route pour les détails d'une propriété
+        element: <PropertyDetail />,
       },
     ],
   },
