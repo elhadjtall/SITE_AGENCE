@@ -24,10 +24,10 @@ const PropertyDetail = () => {
   return (
     <section>
         <div className='container mx-auto min-h-[800px] mb-14'>
-            <div>
+            <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center'>
                 <div>
-                    <h2>{house.name}</h2>
-                    <h2>{house.address}</h2>
+                    <h2 className='text-2xl font-semibold'>{house.name}</h2>
+                    <h3 className='text-lg mb-4'>{house.address}</h3>
                 </div>
                 <div>
                     <div>{house.type}</div>
