@@ -53,10 +53,23 @@ const PropertyDetail = () => {
                         </div>
                         <div className='flex gap-x-2 items-center'>
                             <BiArea className='text-2xl'/>
-                            <div className='flex gap-x-2'>{house.bedrooms}</div>
+                            <div className='flex gap-x-2'>{house.surface}</div>
                         </div>
                     </div>
                     <div>{house.description}</div>
+                </div>
+                {/* creer une div pour ajouter les infos de la maison et la map à droite */}
+                <div className='flex-1 bg-white-100 w-full mb-8 border border-gray-300 rounded-lg px-6 py-8'>
+                    <div className='flex items-center gap-x-4 mb-8'>
+                        {/* creer une div pour ajouter l'image de l'agent et le lien */}
+                        <div className='w-20 h-20 p-1 border border-gray-300 rounded-full'>
+                            {/* creer une img pour ajouter l'image de l'agent */}
+                            <img src={house.agent.image} alt="" />
+                            {/* creer un lien pour rediriger vers la page de l'agent */}
+                            <Link to="" className='text-violet-700 text-sm'>Decouvrir l'annonce</Link>
+                        </div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </div>
