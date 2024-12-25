@@ -56,6 +56,7 @@ const PropertyDetail = () => {
                             <div className='flex gap-x-2'>{house.bedrooms}</div>
                         </div>
                     </div>
+                    <div>{house.description}</div>
                 </div>
             </div>
         </div>
