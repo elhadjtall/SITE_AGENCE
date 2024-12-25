@@ -37,6 +37,13 @@ const PropertyDetail = () => {
                     <div className='flex items-center gap-1'>$ {house.price}</div>
                 </div>
             </div>
+            <div>
+                <div>
+                    <div>
+                        <img className='w-full h-full object-cover' src={house.imageLg} alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
   );
