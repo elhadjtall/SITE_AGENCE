@@ -37,10 +37,24 @@ const PropertyDetail = () => {
                     <div className='flex items-center gap-1'>$ {house.price}</div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <div>
+            <div className='flex flex-col items-start gap-8 lg:flex-row'>
+                <div className='max-w-[768px]'>
+                    <div className='mb-8'>
                         <img className='w-full h-full object-cover' src={house.imageLg} alt="" />
+                    </div>
+                    <div>
+                        <div className='flex gap-x-4 mb-6 text-sm'>
+                            <BiBed  className='text-2xl'/>
+                            <div className='flex gap-x-2'>{house.bedrooms}</div>
+                        </div>
+                        <div className='flex gap-x-4 mb-6 text-sm'>
+                            <BiBath className='text-2xl'/>
+                            <div className='flex gap-x-2'>{house.bedrooms}</div>
+                        </div>
+                        <div className='flex gap-x-4 mb-6 text-sm'>
+                            <BiArea className='text-2xl'/>
+                            <div className='flex gap-x-2'>{house.bedrooms}</div>
+                        </div>
                     </div>
                 </div>
             </div>
