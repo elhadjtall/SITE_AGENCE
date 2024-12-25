@@ -29,12 +29,12 @@ const PropertyDetail = () => {
                     <h2 className='text-2xl font-semibold'>{house.name}</h2>
                     <h3 className='text-lg mb-4'>{house.address}</h3>
                 </div>
-                <div>
-                    <div>{house.type}</div>
-                    <div>{house.country}</div>
+                <div className='mb-4 lg:mb-0 flex gap-x-2 text-sm'>
+                    <div className='bg-green-700 text-white rounded-full px-3'>{house.type}</div>
+                    <div className='bg-violet-700 text-white rounded-full px-3'>{house.country}</div>
                 </div>
-                <div>
-                    <div>$ {house.price}</div>
+                <div className='text-lg font-semibold text-violet-600 mb-4'>
+                    <div className='flex items-center gap-1'>$ {house.price}</div>
                 </div>
             </div>
         </div>
