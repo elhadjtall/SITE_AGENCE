@@ -76,10 +76,10 @@ const PropertyDetail = () => {
                         <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Nom*' />
                             <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="email" placeholder='Email*' />
                             <input  className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Telephone*' />
-                            <textarea className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-36 resize-none text-sm' placeholder='Message*'></textarea>
+                            <textarea className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-36 resize-none text-gray-400' placeholder='Message*' defaultValue='Bonjour, je suis interessé(e) par [Le titre de la maison]'></textarea>
                             <div>
-                                <button>Envoyer</button>
-                                <button>Appeler</button>
+                                <button className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'>Envoyer</button>
+                                <button className='border border-violet-700 text-violet-700 hover:border-violet-500 rounded p-4 text-sm w-full transition'>Appeler</button>
                             </div>
                         </form>
                 </div>
