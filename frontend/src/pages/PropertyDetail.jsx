@@ -65,10 +65,11 @@ const PropertyDetail = () => {
                         <div className='w-20 h-20 p-1 border border-gray-300 rounded-full'>
                             {/* creer une img pour ajouter l'image de l'agent */}
                             <img src={house.agent.image} alt="" />
-                            {/* creer un lien pour rediriger vers la page de l'agent */}
-                            <Link to="" className='text-violet-700 text-sm'>Decouvrir l'annonce</Link>
                         </div>
-                        <div></div>
+                        <div>
+                            <div>{house.agent.name}</div>
+                            <Link className='text-violet-700 text-sm' to=''>Voir la liste</Link>
+                        </div>
                     </div>
                 </div>
             </div>
