@@ -67,10 +67,21 @@ const PropertyDetail = () => {
                             <img src={house.agent.image} alt="" />
                         </div>
                         <div>
-                            <div>{house.agent.name}</div>
-                            <Link className='text-violet-700 text-sm' to=''>Voir la liste</Link>
+                            <div className='font-bold text-lg'>{house.agent.name}</div>
+                            <Link to='' className='text-violet-700 text-sm'>Voir la liste</Link>
                         </div>
                     </div>
+                    {/* formulaire */}
+                    <form>
+                        <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Nom' />
+                            <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="email" placeholder='Email' />
+                            <input  className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Telephone' />
+                            <textarea className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-36 resize-none text-sm' placeholder='Message'></textarea>
+                            <div>
+                                <button>Envoyer</button>
+                                <button>Appeler</button>
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>
