@@ -73,10 +73,10 @@ const PropertyDetail = () => {
                     </div>
                     {/* formulaire */}
                     <form>
-                        <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Nom' />
-                            <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="email" placeholder='Email' />
-                            <input  className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Telephone' />
-                            <textarea className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-36 resize-none text-sm' placeholder='Message'></textarea>
+                        <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Nom*' />
+                            <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="email" placeholder='Email*' />
+                            <input  className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Telephone*' />
+                            <textarea className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-36 resize-none text-sm' placeholder='Message*'></textarea>
                             <div>
                                 <button>Envoyer</button>
                                 <button>Appeler</button>
