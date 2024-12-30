@@ -10,10 +10,27 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
-          <h3>MyImmo</h3>
+          <h3 className="text-2xl font-semibold text-violet-500">MyImmo</h3>
         </Link>
         {/* Buttons Log in and Sign up */}
         <div className="flex items-center gap-6">
+          <ul className="flex items-center gap-6">
+            <li>
+              <Link
+                className="hover:text-violet-900 transition"
+                to="/">Home</Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-violet-900 transition"
+                to="/about">About</Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-violet-900 transition"
+                to="/contact">Contact</Link>
+            </li>
+          </ul>
           <Link
             className="hover:text-violet-900 transition"
             to="/">Log In</Link>
