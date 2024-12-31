@@ -14,8 +14,8 @@ const Login = () => {
             <div className='flex-1 px-10 py-14 bg-white rounded w-full'>
                 <h1 className='text-3xl font-semibold mb-4 text-center py-4'>Log with account</h1>
                 <form className='flex flex-col gap-y-4'>
-                    <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="email" placeholder='Email*' />
-                    <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type="password" placeholder='Password*' />
+                    <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="email" placeholder='Email*' />
+                    <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="password" placeholder='Password*' />
                     <div className='flex gap-x-2'>
                         <button className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'>Se connecter</button>
                     </div>
