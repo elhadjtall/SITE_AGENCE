@@ -25,11 +25,6 @@ const Header = () => {
                 className="hover:text-violet-900 transition"
                 to="/about">About</Link>
             </li>
-            <li>
-              <Link
-                className="hover:text-violet-900 transition"
-                to="/contact">Contact</Link>
-            </li>
           </ul>
           <Link
             className="hover:text-violet-900 transition"
