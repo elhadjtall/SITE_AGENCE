@@ -11,6 +11,7 @@ import { HouseContextProvider } from "./components/HouseContext.jsx";
 // Import des pages
 import Home from "./pages/Home.jsx";
 import PropertyDetail from "./pages/PropertyDetail.jsx"; // Importez la page PropertyDetail
+import Login from "./pages/Login.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/property/:id", // Route pour les détails d'une propriété
         element: <PropertyDetail />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
