@@ -12,6 +12,7 @@ import { HouseContextProvider } from "./components/HouseContext.jsx";
 import Home from "./pages/Home.jsx";
 import PropertyDetail from "./pages/PropertyDetail.jsx"; // Importez la page PropertyDetail
 import Login from "./pages/Login.jsx";
+import Signup from "./pages/Signup.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
+      {
+        path: "/signup",
+        element: <Signup />,
+      }
     ],
   },
 ]);
