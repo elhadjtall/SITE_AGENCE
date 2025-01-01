@@ -1,5 +1,8 @@
 import React from 'react'
 
+// importation des liens
+import { Link } from 'react-router-dom';
+
 const Login = () => {
   return (
     <section>
@@ -16,6 +19,10 @@ const Login = () => {
                 <form className='flex flex-col gap-y-4'>
                     <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="email" placeholder='Email*' />
                     <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="password" placeholder='Password*' />
+                    <div className='flex justify-between text-sm'>
+                        <Link className='text-violet-700 font-semibold'>Mot de passe oublie ?</Link>
+                        <Link className='text-violet-700 font-semibold'>Vous n'avez pas de compte ?</Link>
+                    </div>
                     <div className='flex gap-x-2'>
                         <button className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'>Se connecter</button>
                     </div>
