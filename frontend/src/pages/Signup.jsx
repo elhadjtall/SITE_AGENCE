@@ -22,7 +22,6 @@ const Signup = () => {
                     <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="password" placeholder='Password*' />
                     <div className='flex justify-between text-1xl'>
                         <Link className='text-violet-700 font-semibold' to=''>Mot de passe oublie ?</Link>
-                        <Link className='text-violet-700 font-semibold' to=''>Vous n'avez pas de compte ?</Link>
                     </div>
                     <div className='flex gap-x-2'>
                         <button className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'>Creer</button>
