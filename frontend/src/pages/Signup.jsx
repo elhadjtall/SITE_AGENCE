@@ -17,8 +17,14 @@ const Signup = () => {
             <div className='flex-1 px-10 py-14 bg-white rounded w-full'>
                 <h1 className='text-3xl font-semibold mb-4 text-center py-4'>Creat a account</h1>
                 <form className='flex flex-col gap-y-4'>
+                    <div className='flex gap-x-2'>
                     <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Name*' />
+                    <input  className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Lastname*' />
+                    </div>
+                    <div className='flex gap-x-2'>
                     <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="email" placeholder='Email*' />
+                    <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="number" placeholder='Phone*'/>
+                    </div>
                     <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="password" placeholder='Password*' />
                     <div className='flex justify-between text-1xl'>
                         <div>
