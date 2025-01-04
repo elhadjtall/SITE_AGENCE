@@ -13,6 +13,7 @@ import Home from "./pages/Home.jsx";
 import PropertyDetail from "./pages/PropertyDetail.jsx"; // Importez la page PropertyDetail
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
+import About from "./pages/About.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,12 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       }
+
     ],
   },
 ]);
