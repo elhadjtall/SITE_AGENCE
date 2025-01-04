@@ -29,17 +29,14 @@ const Signup = () => {
                         <input className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' type="password" placeholder='Password*' />
                         <input type="password" className='border border-violet-700  outline-none rounded w-full px-4 h-14 text-sm' placeholder='Confirm Password*' />
                     </div>
-                    <div className='flex justify-between text-1xl'>
-                        <div>
-                            <Link className='text-violet-700 font-semibold' to=''>Mot de passe oublie ?</Link>
-                        </div>
+                    <div className='flex gap-x-2 text-2xl'>
+                        <button className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'>Creer</button>
+                    </div>
+                    <div className='flex justify-center text-1xl'>
                         <div className='flex gap-x-2'>
                             <p>Vous avez deja un compte ?</p>
                             <Link className='text-violet-700 font-semibold' to='/login'>Se connecter</Link>
                         </div>
-                    </div>
-                    <div className='flex gap-x-2 text-2xl'>
-                        <button className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'>Creer</button>
                     </div>
                 </form>
             </div>
