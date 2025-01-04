@@ -1,10 +1,34 @@
-import React from 'react'
+import React from 'react';
+
+
+import elon from '../assets/img/elon.jpg';
 
 const About = () => {
   return (
-    <div>
-      A propos
-    </div>
+    <section>
+        <div>
+            <h1>Qui somme nous ?</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, mollitia fuga, quidem obcaecati possimus exercitationem sequi sint, alias quos aperiam omnis accusamus repudiandae quas! Quaerat quas quisquam eum eveniet officiis.</p>
+        </div>
+        <div className='flex gap-x-8'>
+            <div>
+              <div>
+                <img src={elon} alt="" />
+              </div>
+              <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+              </div>
+            </div>
+            <div>
+                <div>
+                    <img src={elon} alt="" />
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                </div>
+            </div>
+        </div>
+    </section>
   )
 }
 
