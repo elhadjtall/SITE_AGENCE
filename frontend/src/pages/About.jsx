@@ -15,11 +15,15 @@ const About = () => {
               <div className=''>
                 <img className=' object-cover border border-gray-200' src={elon} alt="" />
               </div>
+              <div className='text-center flex gap-x-2'>
+                <h1 className='text-2xl font-semibold'>Elhadj TALL</h1>
+                <p className='text-2xl font-semibold'>CEO</p>
+              </div>
               <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
               </div>
             </div>
-            <div>
+            <div className='flex flex-col items-center'>
                 <div>
                     <img src={elon} alt="" />
                 </div>
