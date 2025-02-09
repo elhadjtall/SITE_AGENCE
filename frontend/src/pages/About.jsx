@@ -34,6 +34,15 @@ const About = () => {
             </div>
         </div>
         </div>
+        {/* Description */}
+        <div>
+          <div>
+            <div className='container mx-auto py-16 text-center'>
+              <h1 className='text-3xl font-semibold text-[#1e1e1e]'>Qui somme nous ?</h1>
+              <p>Nous somme une agence immobilière qui vous aide à trouver le bien immobilier de vos rêves, notre mission est de vous aider à trouver le bien immobilier de vos rêves. Nous utilisons des technologies modernes pour vous aider à trouver le bien immobilier de vos rêves.</p>
+            </div>
+            </div>
+        </div>
     </section>
   )
 }
